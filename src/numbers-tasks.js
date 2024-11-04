@@ -350,8 +350,17 @@ function getSumToN(n) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  const len = String(num).length;
+  let result = 0;
+  let lastDigit;
+  let workNum = num;
+  for (let i = 0; i < len; i += 1) {
+    lastDigit = workNum % 10;
+    result += lastDigit;
+    workNum = Math.floor(workNum / 10);
+  }
+  return result;
 }
 
 /**
