@@ -535,7 +535,7 @@ function getFloatOnString(str) {
  * '10', 8              => 8
  */
 function getIntegerOnString(str, base) {
-  return parseInt(Number.parseFloat(str), base);
+  return Number.parseInt(str, base);
 }
 
 /**
