@@ -670,8 +670,12 @@ function getRandomInteger(min, max) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(/* a, b */) {
-  throw new Error('Not implemented');
+function getHypotenuse(a, b) {
+  const result = Math.hypot(a, b);
+  if (result >= Number.MAX_VALUE) {
+    return Number.MAX_VALUE;
+  }
+  return result;
 }
 
 /**
